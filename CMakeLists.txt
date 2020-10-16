@@ -1,6 +1,6 @@
 # setup project
 cmake_minimum_required(VERSION 3.9)
-project(memflow-cmake-sample VERSION 1.0 DESCRIPTION "memflow-cmake-sample")
+project(memflow-cmake-example VERSION 1.0 DESCRIPTION "memflow-cmake-example")
 
 # load memflow project
 include(ExternalProject)
@@ -25,16 +25,16 @@ file(GLOB_RECURSE sample-sources "src/*.c")
 file(GLOB_RECURSE sample-headers "src/*.h")
 
 add_executable(
-    memflow-cmake-sample
+    example
     ${sample-sources}
     ${sample-headers})
 
 add_dependencies(
-    memflow-cmake-sample
+    example
     memflow)
 
 target_link_libraries(
-    memflow-cmake-sample
+    example
     debug "${CMAKE_BINARY_DIR}/rs/src/memflow/target/debug/libmemflow_ffi.a"
     debug "${CMAKE_BINARY_DIR}/rs/src/memflow/target/debug/libmemflow_win32_ffi.a"
     optimized "${CMAKE_BINARY_DIR}/rs/src/memflow/target/release/libmemflow_win32_ffi.a"
@@ -44,6 +44,6 @@ target_link_libraries(
     m)
 
 target_include_directories(
-    memflow-cmake-sample PUBLIC
+    example PUBLIC
     "${CMAKE_BINARY_DIR}/rs/src/memflow/memflow-ffi"
     "${CMAKE_BINARY_DIR}/rs/src/memflow/memflow-win32-ffi")

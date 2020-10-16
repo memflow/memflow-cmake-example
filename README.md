@@ -1,4 +1,4 @@
-# memflow-cmake-sample
+# memflow-cmake-example
 
 A simple example project showcasing memflow integration with CMake.
 
