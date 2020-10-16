@@ -7,8 +7,8 @@ A simple example project showcasing memflow integration with CMake.
 Building requires the following tools:
 - cmake
 - make
-- g++
-- cargo
+- gcc
+- cargo / rustc
 
 ## Building
 

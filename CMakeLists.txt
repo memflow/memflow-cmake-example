@@ -7,7 +7,7 @@ include(ExternalProject)
 set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/rs)
 ExternalProject_Add(
     memflow
-    GIT_REPOSITORY https://github.com/memflow/memflow
+    GIT_REPOSITORY "https://github.com/memflow/memflow"
     GIT_SHALLOW true
     GIT_PROGRESS true
     GIT_TAG "0.1.3"

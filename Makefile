@@ -1,4 +1,5 @@
 .phony: all release debug clean
+.DEFAULT_GOAL := all
 
 all:
 	make debug
@@ -13,4 +14,4 @@ debug:
 	cd build/debug && cmake ../.. -DCMAKE_INSTALL_LIBDIR=/usr/local/lib -DCMAKE_BUILD_TYPE=Debug && make all
 
 clean:
-	rm -r build
+	rm -rf build
