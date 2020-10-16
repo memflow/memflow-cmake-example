@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 #include <memflow.h>
-using namespace memflow; // workaround for memflow 0.1.3
 #include <memflow_win32.h>
-using namespace memflow_win32; // workaround for memflow 0.1.3
 
 int main(int argc, char *argv[]) {
 	log_init(1);

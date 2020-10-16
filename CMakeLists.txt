@@ -21,7 +21,7 @@ ExternalProject_Add(
 find_package(Threads)
 
 # create binary from /src
-file(GLOB_RECURSE sample-sources "src/*.cpp")
+file(GLOB_RECURSE sample-sources "src/*.c")
 file(GLOB_RECURSE sample-headers "src/*.h")
 
 add_executable(
@@ -40,7 +40,8 @@ target_link_libraries(
     optimized "${CMAKE_BINARY_DIR}/rs/src/memflow/target/release/libmemflow_win32_ffi.a"
     optimized "${CMAKE_BINARY_DIR}/rs/src/memflow/target/release/libmemflow_ffi.a"
     ${CMAKE_THREAD_LIBS_INIT}
-    ${CMAKE_DL_LIBS})
+    ${CMAKE_DL_LIBS}
+    m)
 
 target_include_directories(
     memflow-cmake-sample PUBLIC
