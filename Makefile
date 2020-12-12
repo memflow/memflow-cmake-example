@@ -1,5 +1,5 @@
 .phony: all release debug clean
-.DEFAULT_GOAL := all
+.DEFAULT_GOAL := debug
 
 all:
 	make debug

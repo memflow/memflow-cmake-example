@@ -10,7 +10,7 @@ ExternalProject_Add(
     GIT_REPOSITORY "https://github.com/memflow/memflow"
     GIT_SHALLOW true
     GIT_PROGRESS true
-    GIT_TAG "0.1.3"
+    GIT_TAG "dev"
     CONFIGURE_COMMAND ""
     BUILD_COMMAND cargo build --all-features --workspace
     COMMAND cargo build --release --all-features --workspace
@@ -21,12 +21,14 @@ ExternalProject_Add(
 find_package(Threads)
 
 # create binary from /src
+file(GLOB_RECURSE sample-cpp-sources "src/*.cpp")
 file(GLOB_RECURSE sample-sources "src/*.c")
 file(GLOB_RECURSE sample-headers "src/*.h")
 
 add_executable(
     example
     ${sample-sources}
+	${sample-cpp-sources}
     ${sample-headers})
 
 add_dependencies(
