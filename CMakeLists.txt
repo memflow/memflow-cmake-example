@@ -10,7 +10,7 @@ ExternalProject_Add(
     GIT_REPOSITORY "https://github.com/memflow/memflow"
     GIT_SHALLOW true
     GIT_PROGRESS true
-    GIT_TAG "0.2.0-beta2"
+    GIT_TAG "0.2.0-beta4"
     CONFIGURE_COMMAND ""
     BUILD_COMMAND cargo build --all-features --workspace
     COMMAND cargo build --release --all-features --workspace
