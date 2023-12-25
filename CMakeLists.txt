@@ -10,7 +10,7 @@ ExternalProject_Add(
     GIT_REPOSITORY "https://github.com/memflow/memflow"
     GIT_SHALLOW true
     GIT_PROGRESS true
-    GIT_TAG "0.2.0-beta11"
+    GIT_TAG "0.2.0"
     CONFIGURE_COMMAND ""
     BUILD_COMMAND cargo build --all-features --workspace
     COMMAND cargo build --release --all-features --workspace
@@ -24,6 +24,8 @@ find_package(Threads)
 file(GLOB_RECURSE sample-cpp-sources "src/*.cpp")
 file(GLOB_RECURSE sample-sources "src/*.c")
 file(GLOB_RECURSE sample-headers "src/*.h")
+
+set(CMAKE_CXX_STANDARD 11)
 
 add_executable(
     example
